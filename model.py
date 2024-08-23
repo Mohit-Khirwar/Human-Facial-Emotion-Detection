@@ -38,7 +38,8 @@ if uploaded_image is not None:
     gray = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
 
     # Load Haar Cascade for face detection
-    faceCascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+    faceCascade = cv2.CascadeClassifier('cascades/haarcascade_frontalface_default.xml')
+    #faceCascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
     # Detect faces
     faces = faceCascade.detectMultiScale(gray, 1.1, 4)
